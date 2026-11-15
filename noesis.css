@@ -1,0 +1,26 @@
+/* Noesis additions on top of the portfolio styles */
+.cs-by { font-size: 13px; font-weight: 600; color: var(--muted); }
+.topnav a.nav-cta { background: var(--ink) !important; color: var(--paper) !important; border-radius: 999px; padding-inline: 18px; font-weight: 500; }
+.topnav a.nav-cta:hover { opacity: .85; }
+@media (max-width: 900px) { .fx .topnav a.nav-cta { border-radius: 999px; text-align: center; margin-top: 12px; border-top: 0; } }
+.svc { max-width: none; margin-inline: 0; }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.person { background: var(--surface); border-radius: 32px; padding: 40px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.person h3 { font-family: "Bricolage Grotesque", Inter, sans-serif; font-size: 28px; margin: 8px 0 0; }
+.person p { margin: 0; color: var(--ink-2); line-height: 1.65; }
+.person .person-role { color: var(--accent); font-weight: 600; font-size: 14px; }
+.person-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; display: grid; place-items: center; }
+.person-photo.initials { background: var(--tint); color: var(--accent); font: 700 36px "Bricolage Grotesque", Inter, sans-serif; }
+.person-links { margin-top: auto !important; padding-top: 8px; }
+.person-links a { color: var(--accent); font-weight: 600; }
+.how h2 { font-family: "Bricolage Grotesque", Inter, sans-serif; font-size: 40px; margin: 0 0 24px; }
+.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; gap: 0; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 4px 16px; padding: 22px 0; border-top: 1px solid var(--line); }
+.steps li::before { content: counter(s, decimal-leading-zero); grid-row: span 2; font: 700 22px "Bricolage Grotesque", Inter, sans-serif; color: var(--accent); }
+.steps strong { font-size: 18px; color: var(--ink); }
+.steps span { color: var(--ink-2); line-height: 1.6; }
+@media (max-width: 760px) {
+  .team { grid-template-columns: minmax(0, 1fr); }
+  .person { padding: 28px 22px; border-radius: 24px; }
+  .how h2 { font-size: 30px; }
+}
